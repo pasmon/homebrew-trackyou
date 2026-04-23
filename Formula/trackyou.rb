@@ -18,7 +18,8 @@ class Trackyou < Formula
 
   def install
     bin.install "trackyou"
-    doc.install "README.md", "LICENSE" if (buildpath/"README.md").exist? && (buildpath/"LICENSE").exist?
+    doc.install "README.md" if (buildpath/"README.md").exist?
+    doc.install "LICENSE" if (buildpath/"LICENSE").exist?
   end
 
   test do

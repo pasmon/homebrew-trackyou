@@ -18,10 +18,11 @@ class Trackyou < Formula
 
   def install
     bin.install "trackyou"
-    doc.install "README.md", "LICENSE"
+    doc.install "README.md", "LICENSE" if (buildpath/"README.md").exist? && (buildpath/"LICENSE").exist?
   end
 
   test do
     assert_predicate bin/"trackyou", :exist?
+    assert_predicate bin/"trackyou", :executable?
   end
 end
